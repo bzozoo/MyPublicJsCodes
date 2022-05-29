@@ -10,10 +10,12 @@ async function getWeather() {
 
 function Template({ location, current }) {
 	return `
-		<div class="widget-container">
+		<div style="text-align: center;" class="widget-container">
 			<p>${location.name}</p>
 			<img src="${current.condition.icon}" />
 			<p>${current.temp_c} CELSIUS</p>
+			<p>Last update: ${current.last_updated}</p>
+			<p>Local date/time: ${location.localtime}</p>
 		</div>
 	`;
 }
