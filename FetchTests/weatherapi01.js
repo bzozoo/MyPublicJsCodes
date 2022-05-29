@@ -27,6 +27,7 @@ function ErrorTemplate() {
 async function init() {
 	try {
 		const data = await getWeather();
+		console.log(data);
 		APP_CONTAINER.innerHTML = Template(data);
 	} catch (e) {
 		console.error("Server error");
